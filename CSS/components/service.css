@@ -1,0 +1,82 @@
+.service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-image: url("../../img/Vector.svg"), url("../../img/dots2-element.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0px 50%, 80% 50%;
+    background-size: 60%, 10%;
+}
+.service-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33% - 12px));
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+    width: 70%;
+}
+.service-helper_text {
+    text-align: center;
+    width: 70%;
+}
+.service-list-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 40px 50px 0 #E5E9F666;
+    padding: 20px;
+    transition: 0.3s;
+}
+.service-list-item:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.service-list-card {
+    width: 40%;
+    height: 100%;
+}
+
+/* 4K Телевізори */
+@media (min-width:2560px ){
+    .service-list {
+        width: 75%;
+    }
+    .service-list-card {
+        width: 30%;
+    }
+}
+@media (max-width: 425px) {
+    .service-list-item {
+        gap: 5px;
+        padding: 5px;
+        align-items: center;
+    }
+    .service-list {
+        display: grid;
+        grid-template-columns: none;
+        justify-content: center;
+        align-content: center;
+        gap: 25px;
+        width: 70%;
+    }
+    .service-list-card {
+        width: 25%;
+    }
+    .service-helper_text {
+        display: none;
+    }
+}
